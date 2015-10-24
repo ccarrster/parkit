@@ -1,0 +1,50 @@
+{
+  "meta":{
+    "requests":1,
+    "timestamp":1445714115,
+    "status":200,
+    "message":"Request successful",
+    "method_id":1823,
+    "method":{
+      
+    }
+  },
+  "data":[
+    {
+      "lot_name":"C",
+      "latitude":43.467536,
+      "longitude":-80.538379,
+      "capacity":807,
+      "current_count":278,
+      "percent_filled":34,
+      "last_updated":"2015-10-24T15:15:05-04:00"
+    },
+    {
+      "lot_name":"N",
+      "latitude":43.47491,
+      "longitude":-80.544559,
+      "capacity":252,
+      "current_count":133,
+      "percent_filled":53,
+      "last_updated":"2015-10-24T15:14:13-04:00"
+    },
+    {
+      "lot_name":"W",
+      "latitude":43.474777,
+      "longitude":-80.547579,
+      "capacity":184,
+      "current_count":81,
+      "percent_filled":44,
+      "last_updated":"2015-10-24T15:12:08-04:00"
+    },
+    {
+      "lot_name":"X",
+      "latitude":43.477526,
+      "longitude":-80.545492,
+      "capacity":630,
+      "current_count":184,
+      "percent_filled":29,
+      "last_updated":"2015-10-24T15:14:54-04:00"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+
+{
+  "meta":{
+    "requests":2,
+    "timestamp":1445714356,
+    "status":200,
+    "message":"Request successful",
+    "method_id":1451,
+    "method":{
+      
+    }
+  },
+  "data":{
+    "latitude":43.4738,
+    "longitude":-80.5576,
+    "elevation_m":334.4,
+    "observation_time":"2015-10-24T12:15:00-04:00",
+    "temperature_current_c":8.5,
+    "humidex_c":8.6,
+    "windchill_c":11.2,
+    "temperature_24hr_max_c":11.2,
+    "temperature_24hr_min_c":5.3,
+    "precipitation_15min_mm":0,
+    "precipitation_1hr_mm":-1999.6,
+    "precipitation_24hr_mm":0.2,
+    "relative_humidity_percent":91.6,
+    "dew_point_c":7.2,
+    "wind_speed_kph":0.4,
+    "wind_direction_degrees":null,
+    "pressure_kpa":101.8,
+    "pressure_trend":"falling",
+    "incoming_shortwave_radiation_wm2":44
+  }
+}
