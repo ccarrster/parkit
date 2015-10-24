@@ -1,22 +1,22 @@
-#home>#gmap {
-    width: 90%;
+#gmap {
+    width: 100%;
     height: 150px;
 }
 
-#home>#title {
+#title {
     text-align: center;
-}
-#home>#slug {
-    text-align: center;
-    margin-top: -10px;
-    padding-bottom:10px;
 }
 
-#home>#home-button {
+#home-button {
     margin-top: 30px;
 }
 
 /*################ Park Now ################ */
+#park-now {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
 .title {
     text-align:center;
     background-color: #ccc;

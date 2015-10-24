@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Park It - Home</title>
+    <title>Park Now| Park It</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -21,21 +21,19 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    <style>
 
+    </style>
 </head>
 <body>
-<div id="home">
-    <div id="title"><h1>Park it!</h1></div>
-    <div id="slug">Finding you a parking lot.</div>
+<div id="park-now">
+    <div class="title">Park Now</div>
+    <div class="parkIt"><button>ParkIt!</button></div>
+    <div class="lot-name"><strong>lot name</strong></div>
+    <div class="lot-address">lot address</div>
+    <div class="lot-rate">lot rate</div>
+    <div class="lot-distance">__ km away</div>
     <div id="gmap"></div>
-    <!--<iframe src="https://www.google.com/maps/d/embed?mid=zidwzf_Y1bJQ.k3LXZ26ZQ0-I&hl=en_US" width="640" height="480"></iframe>-->
-    <div id="home-button" style="position: relative">
-        <div style="float:left; padding-left: 10px;"><button>Park Later</button></div>
-        <div style="float:right; padding-right: 10px;">
-            <form  action="park-now.php">
-                <input type="submit" value="Park Now">
-            </form>
-        </div>
-    </div>
+    <button class="show-more">Show more &raquo;</button>
 </div>
 </body>

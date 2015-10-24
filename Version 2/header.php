@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Park It - Home</title>
+    <title>Park It</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize() {
@@ -24,18 +25,3 @@
 
 </head>
 <body>
-<div id="home">
-    <div id="title"><h1>Park it!</h1></div>
-    <div id="slug">Finding you a parking lot.</div>
-    <div id="gmap"></div>
-    <!--<iframe src="https://www.google.com/maps/d/embed?mid=zidwzf_Y1bJQ.k3LXZ26ZQ0-I&hl=en_US" width="640" height="480"></iframe>-->
-    <div id="home-button" style="position: relative">
-        <div style="float:left; padding-left: 10px;"><button>Park Later</button></div>
-        <div style="float:right; padding-right: 10px;">
-            <form  action="park-now.php">
-                <input type="submit" value="Park Now">
-            </form>
-        </div>
-    </div>
-</div>
-</body>
