@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Park It - Home</title>
+    <title>Navigate To Lot | Park It</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -25,14 +25,15 @@
 
 </head>
 <body>
-<div id="home">
-    <div id="title"><h1>Park it!</h1></div>
-    <div id="slug">Finding you a parking lot.</div>
-    <div id="gmap"></div>
-    <!--<iframe src="https://www.google.com/maps/d/embed?mid=zidwzf_Y1bJQ.k3LXZ26ZQ0-I&hl=en_US" width="640" height="480"></iframe>-->
-    <div id="home-button" style="position: relative">
-        <div style="float:left; padding-left: 20px;"<a href=""><button class="circular-button">Choose destination</button></a></div>
-        <div style="float:right; padding-right: 20px;"><a href="park-now.php"><button class="circular-button">Park <br> Near Here</button></a></div>
+<div id="navigate">
+    <div class="nav-menu">
+        <a onclick="window.history.back()"><i class="fa fa-chevron-left" style="font-size:22px"></i></a>
+        <div class="title">Navigate To Lot</div>
+        <a href="main.php"><i class="fa fa-home" style="font-size:22px"></i></a>
     </div>
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2895.8601686635648!2d-80.52576599999998!3d43.463516399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1445726543503" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <button class="show-more">Select other lots</button>
 </div>
 </body>

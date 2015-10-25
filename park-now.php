@@ -27,13 +27,13 @@
 <div id="park-now">
     <div class="nav-menu">
         <a onclick="window.history.back()"><i class="fa fa-chevron-left" style="font-size:22px"></i></a>
-        <div class="title">Park Now</div>
+        <div class="title">Uptown Parkade</div>
         <a href="main.php"><i class="fa fa-home" style="font-size:22px"></i></a>
     </div>
-        <div id="map">
+    <div id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2895.8601686635648!2d-80.52576599999998!3d43.463516399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1445726543503" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
-    <button class="circular-button parkIt">Directions</button>
+    <a href="navigate-to-lot.php"><button class="circular-button parkIt">Directions</button></a>
     <div class="lot-details">
         <div class="lot-name"><strong>lot name</strong></div>
         <div class="lot-address">lot address</div>
