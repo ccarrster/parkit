@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
