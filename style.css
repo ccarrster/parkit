@@ -1,4 +1,8 @@
-#home>#gmap {
+body {
+    background-image: url("parkIt_background.jpg");
+    background-size: 100% 100%;
+}
+#gmap {
     width: 90%;
     height: 200px;
     margin-left: 5%;
@@ -6,6 +10,7 @@
 
 #home>#title {
     text-align: center;
+    padding: 50px 0 5px 0;
 }
 #home>#slug {
     text-align: center;
@@ -19,54 +24,76 @@
 
 /*################ Park Now ################ */
 .nav-menu {
-    height: 30px;
+    height: 40px;
 }
 .title {
     text-align:center;
-    background-color: #92c57a;
+    text-transform: uppercase;
+    background-color: #45b657;
+    color: #fff;
     font-size:22px;
 }
 #park-now>#gmap {
-    position: absolute;
-    bottom: 25px;
-    height: 70%;
+    margin-top: 10px;
+    width: 90%;
+    height: 240px;
+    margin-left: 5%;
 }
 .lot-details {
-    padding-left: 5px;
+    /*padding-left: 5px;*/
+}
+#lot-details-1 {
+    width:90%;
+    padding:5px;    
+    margin-left:5%;
+    background-color: #fff;
+    margin-bottom:20px; 
+}
+#lot-details-2 {
+    width:90%;
+    padding:5px;
+    margin-left:5%;
+    background-color: #fff;
+    margin-bottom:20px; 
 }
 .circular-button {
     top: 230px;
     right: 30px;
     border-radius: 50%;
     border-color: white;
-    width: 90px;
-    height: 90px;
-    background-color: #92c57a;
-    color: #444;
+    width: 100px;
+    height: 100px;
+    background-color: #45b657;
+    color: #fff;
 }
 .parkIt {
     position: absolute;
-}
-.lot-address {
-    padding-bottom: 10px;
-    border-bottom: 2px solid grey;
 }
 .lot-rate {
     padding-top:5px;
 }
 .show-more {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 0;
-    background-color: #92c57a;
-    left: 0px;
+    width: 90%;
+    margin-left:5%;
+    background-color: #fff;
+    text-decoration: bold;
+    font-weight: bold;
+    padding:5px;
 }
-
+.show-more>a {
+    text-decoration: none;
+}
+.show-more .fa-chevron-right {
+    float: right;
+    font-size: 135%;
+    padding-right: 10px;
+    padding-top:3px;
+}
 /* ########### font-awesome ############### */
 .fa-chevron-left {
-    float:left;
     padding:5px;
+    position: absolute;
+    z-index: 1;
 }
 .fa-home {
     position: absolute;
@@ -80,12 +107,26 @@
     height:100%;
 }
 
-#navigate > #map {
-    width: 100%;
-    height: 100%;
-    position: relative;
+#navigate > #gmap {
+    margin-top: 10px;
+    width: 90%;
+    height: 388px;
 }
 
+input[type="number"] {
+    width:40px;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+.timer{
+    width:250px;
+    height:250px;
+    color: #fff;
+    background-color: #45b657;
+    border: 15px solid #3d6041;
+    margin:30px;
+}
 .report-prob {
     width: 100%;
     position: fixed;
@@ -96,7 +137,36 @@
 .slidedown {
     position: absolute;
     width: 100%;
-    bottom: 110px;
+    bottom: 120px;
     text-align: center;
+}
+
+#alldetails {
+    background-color: #fff;
+}
+#alldetails a {
+    text-decoration: none;
+}
+.lot-details {
+    padding-bottom:5px;
+}
+#date{
+    margin-top:-5px;
+    background-color: #ccc;
+    text-align: center;
+    padding: 5px;    
+}
+
+.list>.lot-details {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height:1.7;
+}
+.list>.lot-details>.lot-distance {
+    right:30px;
+}
+.list {
+    border-bottom: 4px solid grey;
+    padding-left:10px;
 }
 

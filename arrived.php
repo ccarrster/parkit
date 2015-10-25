@@ -37,39 +37,10 @@
         <button class=" circular-button timer" type="submit"><h1>Set Timer</h1></button>
     </form>
     <div style="text-align:center"><h3>Parking Rate: $2.50/hour</h3></div>
-    <style>
-        input[type="number"] {
-            width:40px;
-        }
-        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {  
-           opacity: 1;
-        }
-        .timer{
-            width:250px;
-            height:250px;
-            color: #fff;
-            background-color: #45b657;
-            border: 15px solid #3d6041;
-            margin:30px;
-        }
-        .report-prob {
-            width: 100%;
-            position: fixed;
-            bottom: -150px;
-            background-color: #eee;
-            border-top: 15px solid #ccc;
-        }
-        .slidedown {
-            position: absolute;
-            width: 100%;
-            bottom: 110px;
-            text-align: center;
-        }
-    </style>
     <button class="show-more">Report Lot as Full!</button>
     <div class="report-prob">
         <div style="text-align: center;">Lot is full<br />
-        <button class="circular-button">Confirm</button></div>
+        <button class="circular-button" onclick="location = 'main.php'">Confirm</button></div>
         <div class="slidedown"><i class="fa fa-chevron-down"></i></div>
     </div>
 </div>

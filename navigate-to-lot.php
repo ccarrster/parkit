@@ -9,17 +9,35 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+    <script src="test.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize() {
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
             var mapCanvas = document.getElementById('gmap');
             var mapOptions = {
-                center: new google.maps.LatLng(44.5403, -78.5463),
-                zoom: 8,
+                center: new google.maps.LatLng(43.463645, -80.5278047),
+                zoom: 15,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
-            var map = new google.maps.Map(mapCanvas, mapOptions)
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            directionsDisplay.setMap(map);
+            var myLatLng = {lat: 43.463645, lng: -80.5278047};
+            var lot = getClosestFreeLot(43.463645, -80.5278047);
+            var other = {lat: parseFloat(lot.latitude), lng: parseFloat(lot.longitude)};
+
+            directionsService.route({
+                origin: myLatLng,
+                destination: other,
+                travelMode: google.maps.TravelMode.DRIVING
+            }, function(response, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -29,12 +47,11 @@
 <div id="navigate">
     <div class="nav-menu">
         <a onclick="window.history.back()"><i class="fa fa-chevron-left" style="font-size:22px"></i></a>
-        <div class="title">Navigate To Lot</div>
+        <div class="title">Navigating To Lot</div>
         <a href="main.php"><i class="fa fa-home" style="font-size:22px"></i></a>
     </div>
-    <div id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2895.8601686635648!2d-80.52576599999998!3d43.463516399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1445726543503" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-    <button class="show-more">Select other lots</button>
+    <div id="gmap"></div>
+    <div><a href="arrived.php">Arrive</a></div>
+    <div class="show-more"><a href="details.php"><div style="width:100%">Select other lots<i class="fa fa-chevron-right"></i></div></a></div>
 </div>
 </body>
