@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script>
         function initialize() {
@@ -25,15 +26,61 @@
 
 </head>
 <body>
+<div class="nav-menu">
+    <a onclick="window.history.back()"><i class="fa fa-chevron-left" style="font-size:22px"></i></a>
+    <div class="title">Arrived At Lot!</div>
+    <a href="main.php"><i class="fa fa-home" style="font-size:22px"></i></a>
+</div>    
 <div id="navigate">
-    <div class="nav-menu">
-        <a onclick="window.history.back()"><i class="fa fa-chevron-left" style="font-size:22px"></i></a>
-        <div class="title">Arrived At Lot!</div>
-        <a href="main.php"><i class="fa fa-home" style="font-size:22px"></i></a>
+    <form action="countdown.php">
+        <div style="text-align:center"><h3>I bought <input id="time" name="time" type="number" min="0" value="1" size="number" maxlength="2"> hour(s) </h3></div>
+        <button class=" circular-button timer" type="submit"><h1>Set Timer</h1></button>
+    </form>
+    <div style="text-align:center"><h3>Parking Rate: $2.50/hour</h3></div>
+    <style>
+        input[type="number"] {
+            width:40px;
+        }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {  
+           opacity: 1;
+        }
+        .timer{
+            width:250px;
+            height:250px;
+            color: #fff;
+            background-color: #45b657;
+            border: 15px solid #3d6041;
+            margin:30px;
+        }
+        .report-prob {
+            width: 100%;
+            position: fixed;
+            bottom: -150px;
+            background-color: #eee;
+            border-top: 15px solid #ccc;
+        }
+        .slidedown {
+            position: absolute;
+            width: 100%;
+            bottom: 110px;
+            text-align: center;
+        }
+    </style>
+    <button class="show-more">Report Lot as Full!</button>
+    <div class="report-prob">
+        <div style="text-align: center;">Lot is full<br />
+        <button class="circular-button">Confirm</button></div>
+        <div class="slidedown"><i class="fa fa-chevron-down"></i></div>
     </div>
-    <div id="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2895.8601686635648!2d-80.52576599999998!3d43.463516399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1445726543503" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </div>
-    <button class="show-more">Select other lots</button>
 </div>
+<script>
+    $(document).ready(function() {
+        $(".show-more").click(function() {
+            $(".report-prob").animate({'bottom':'0px'},100);
+        });
+        $(".slidedown").click(function() {
+            $(".report-prob").animate({'bottom':'-150px'},100);
+        });
+    });
+</script>
 </body>

@@ -31,13 +31,13 @@
                 origin: myLatLng,
                 destination: other,
                 travelMode: google.maps.TravelMode.DRIVING
-              }, function(response, status) {
+            }, function(response, status) {
                 if (status === google.maps.DirectionsStatus.OK) {
                   directionsDisplay.setDirections(response);
                 } else {
                   window.alert('Directions request failed due to ' + status);
                 }
-              });
+            });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
         
@@ -46,11 +46,14 @@
 
 </head>
 <body>
-<div id="title"><h1>Park It!</h1></div>
-<div id="gmap"></div>
-<!--<iframe src="https://www.google.com/maps/d/embed?mid=zidwzf_Y1bJQ.k3LXZ26ZQ0-I&hl=en_US" width="640" height="480"></iframe>-->
-<div id="home-button" style="position: relative">
-    <div style="float:left; padding-left: 10px;"><button>Park Later</button></div>
-    <div style="float:right; padding-right: 10px;"><button>park Now</button></div>
+<div id="home">
+    <div id="title"><h1>Park it!</h1></div>
+    <div id="slug">Finding you a parking lot.</div>
+    <div id="gmap"></div>
+    <!--<iframe src="https://www.google.com/maps/d/embed?mid=zidwzf_Y1bJQ.k3LXZ26ZQ0-I&hl=en_US" width="640" height="480"></iframe>-->
+    <div id="home-button" style="position: relative">
+        <div style="float:left; padding-left: 20px;"<a href=""><button class="circular-button">Choose destination</button></a></div>
+    <div style="float:right; padding-right: 20px;"><a href="park-now.php"><button class="circular-button">Park <br> Near Here</button></a></div>
+</div>
 </div>
 </body>

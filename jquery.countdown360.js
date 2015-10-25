@@ -20,7 +20,7 @@
     this.element = element;
     this.settings = $.extend({}, defaults, options);
     if (!this.settings.fontSize) { this.settings.fontSize = this.settings.radius/1.2; }
-    if (!this.settings.strokeWidth) { this.settings.strokeWidth = this.settings.radius/4; }
+    if (!this.settings.strokeWidth) { this.settings.strokeWidth = 15; }
     this._defaults = defaults;
     this._name = pluginName;
     this._init();
